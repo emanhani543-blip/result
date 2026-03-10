@@ -1,1 +1,86 @@
 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>نتيجة الطلاب</title>
+<style>
+body{
+font-family: Arial;
+text-align:center;
+background:#f2f2f2;
+}
+.box{
+background:white;
+width:350px;
+margin:auto;
+margin-top:100px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px #ccc;
+}
+input{
+width:90%;
+padding:10px;
+margin:10px;
+}
+button{
+padding:10px 20px;
+background:green;
+color:white;
+border:none;
+border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>كلية التجارة جامعة القاهرة</h2>
+
+<input id="code" placeholder="ادخل الكود"><br>
+<input id="pass" placeholder="ادخل الرقم السري"><br>
+
+<button onclick="show()">عرض النتيجة</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function show(){
+
+var code=document.getElementById("code").value;
+var pass=document.getElementById("pass").value;
+
+if(code=="26053101128" && pass=="30706181700801"){
+
+document.getElementById("result").innerHTML=`
+
+<h3>إيمان هاني سعيد</h3>
+<p>الفرقة الأولى</p>
+
+المحاسبة: جيد جدا<br>
+مبادئ إدارة الأعمال: امتياز<br>
+مبادئ الاقتصاد: امتياز<br>
+الرياضيات البحتة التجاريين: امتياز<br>
+مبادئ القانون والالتزامات: امتياز<br>
+لغة أجنبية: امتياز
+
+`;
+
+}else{
+
+document.getElementById("result").innerHTML="الكود أو الرقم السري خطأ";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
